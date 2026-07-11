@@ -1,0 +1,55 @@
+project:
+  name: tvp_vamtoolbox_reproduction
+  mode: ideal
+  random_seed: 2026
+
+known_metadata:
+  wavelength_nm: 405
+  vial_inner_diameter_mm: 10.0
+  resin_components:
+    WDS3532: 2.0
+    PEGDA: 1.0
+    EDAB: 0.003
+    CQ: 0.003
+  ratio_basis: unknown
+  pegda_molecular_weight: null
+
+volume:
+  shape_voxels: [128, 128, 128]
+  physical_size_mm: [10.0, 10.0, 10.0]
+  voxel_size_mm: auto
+
+projection:
+  angle_start_deg: 0.0
+  angle_end_deg: 180.0
+  number_of_angles: 360
+  endpoint: false
+  enforce_nonnegative: true
+  normalization: global_max
+
+material_model:
+  type: normalized_threshold
+  gel_threshold: 1.0
+  absorption_coefficient_mm_inv: null
+  refractive_index_liquid_405nm: null
+  refractive_index_cured_405nm: null
+
+projector_calibration:
+  projected_pixel_size_x_mm: null
+  projected_pixel_size_z_mm: null
+  grayscale_to_irradiance_file: null
+  spatial_uniformity_map_file: null
+  status: uncalibrated
+
+vial_calibration:
+  outer_diameter_mm: null
+  wall_thickness_mm: null
+  glass_type: null
+  refractive_index_405nm: null
+  status: uncalibrated
+
+rotation_calibration:
+  stage_model: null
+  rpm: null
+  angle_time_file: null
+  status: uncalibrated
